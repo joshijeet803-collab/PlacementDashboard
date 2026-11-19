@@ -1,0 +1,89 @@
+﻿@{
+    ViewBag.Title = "Placement Dashboard";
+}
+
+<style>
+    body {
+        background: #f1f5f9;
+        font-family: Arial, sans-serif;
+    }
+
+    .hero {
+        background: linear-gradient(135deg, #101c3a, #2563eb);
+        color: white;
+        padding: 55px 40px;
+        border-radius: 18px;
+        margin-top: 30px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    .hero h1 {
+        font-size: 38px;
+        font-weight: bold;
+    }
+
+    .hero p {
+        font-size: 17px;
+        color: #dbeafe;
+    }
+
+    .card-box {
+        background: white;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+        margin-top: 25px;
+        transition: 0.3s;
+    }
+
+    .card-box:hover {
+        transform: translateY(-5px);
+    }
+
+    .card-box h3 {
+        color: #1e3a8a;
+        font-weight: bold;
+    }
+
+    .btn-main {
+        background: #2563eb;
+        color: white;
+        border-radius: 8px;
+        padding: 10px 20px;
+    }
+
+    .btn-main:hover {
+        background: #1d4ed8;
+        color: white;
+    }
+</style>
+
+<div class="hero">
+    <h1>Placement Dashboard</h1>
+    <p>Manage students, companies, placements and placement records efficiently.</p>
+
+    @Html.ActionLink("Get Started", "Index", "Placement", null, new { @class = "btn btn-main" })
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card-box">
+            <h3>🎓 Students</h3>
+            <p>Manage student details and placement eligibility.</p>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card-box">
+            <h3>🏢 Companies</h3>
+            <p>Manage company information and recruitment details.</p>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card-box">
+            <h3>📊 Placements</h3>
+            <p>Track placement records and student selections.</p>
+        </div>
+    </div>
+</div>

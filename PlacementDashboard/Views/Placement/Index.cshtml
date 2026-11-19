@@ -1,0 +1,65 @@
+﻿@model IEnumerable<PlacementDashboard.Models.Student>
+
+@{
+    ViewBag.Title = "Placement Dashboard";
+}
+
+<div class="hero">
+    <h1>Placement Dashboard</h1>
+    <p>Student placement overview and recruitment management</p>
+</div>
+
+<div class="card-box">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap;">
+        <h2>Student Placement Records</h2>
+        <a href="@Url.Action("Add", "Placement")" class="btn btn-success">+ Add Student</a>
+    </div>
+
+    @using (Html.BeginForm("Index", "Placement", FormMethod.Get))
+    {
+        <div style="margin:20px 0;">
+            <input type="text" name="search" class="form-control"
+                   placeholder="Search student, company or branch" />
+            <button type="submit" class="btn btn-primary">Search</button>
+        </div>
+    }
+
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead style="background:#2563eb; color:white;">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Branch</th>
+                    <th>CGPA</th>
+                    <th>Email</th>
+                    <th>Company</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var s in Model)
+                {
+                    <tr>
+                        <td>@s.StudentId</td>
+                        <td>@s.StudentName</td>
+                        <td>@s.Branch</td>
+                        <td>@s.CGPA</td>
+                        <td>@s.Email</td>
+                        <td>@s.Company</td>
+                        <td>@s.Status</td>
+                        <td>
+                            <a href="@Url.Action("Delete", "Placement", new { id = s.StudentId })"
+                               class="btn btn-danger btn-sm"
+                               onclick="return confirm('Delete this student?');">
+                                Delete
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

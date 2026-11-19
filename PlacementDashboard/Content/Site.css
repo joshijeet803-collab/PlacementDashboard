@@ -1,0 +1,171 @@
+﻿body {
+    padding-top: 70px;
+    padding-bottom: 20px;
+    background: #f4f6f9;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    min-height: 60px;
+    background: #111827;
+    border: none;
+    border-radius: 0;
+}
+
+.navbar-brand {
+    font-size: 20px;
+    font-weight: bold;
+    color: white !important;
+    padding-top: 20px;
+}
+
+.navbar-nav > li > a {
+    color: white !important;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+    .navbar-nav > li > a:hover {
+        background: #2563eb !important;
+        color: white !important;
+    }
+
+/* Main container */
+.body-content {
+    padding-top: 15px;
+    margin-top: 10px;
+}
+
+/* Dashboard Header */
+.dashboard-header {
+    background: linear-gradient(120deg, #111827, #2563eb);
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+}
+
+/* Cards */
+.card {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+}
+
+/* Tables */
+.table {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+    .table thead {
+        background: #2563eb;
+        color: white;
+    }
+
+    .table th {
+        padding: 14px !important;
+    }
+
+    .table td {
+        padding: 12px !important;
+        vertical-align: middle !important;
+    }
+
+/* Buttons */
+.btn-primary {
+    background: #2563eb;
+    border-color: #2563eb;
+    border-radius: 7px;
+}
+
+    .btn-primary:hover {
+        background: #1d4ed8;
+    }
+
+/* Search */
+.form-control {
+    border-radius: 8px;
+    height: 42px;
+}
+
+/* Status */
+.badge {
+    padding: 7px 12px;
+    border-radius: 20px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    color: #777;
+    margin-top: 35px;
+    padding: 15px;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    .navbar-brand {
+        padding-top: 15px;
+    }
+
+    .navbar-nav > li > a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .dashboard-header {
+        padding: 20px;
+    }
+
+    .table {
+        font-size: 12px;
+    }
+}
+/* Navbar alignment fix */
+.navbar-fixed-top {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+}
+
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-header {
+    float: none !important;
+}
+
+.navbar-nav {
+    float: none !important;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+}
+
+    .navbar-nav > li {
+        float: none !important;
+    }
+
+        .navbar-nav > li > a {
+            padding: 20px 15px !important;
+        }
+
+.navbar-brand {
+    float: none !important;
+    display: block;
+}
+
+body {
+    padding-top: 70px !important;
+}
